@@ -5,15 +5,69 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Home</title>
+		<link rel="icon" type="image/png" href="resources/img/icon_rounded.png">
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/custom.css">
 	</head>
 
 	<body>
-		<video autoplay muted loop id="frontPageVideo">
-			<source src="resources/vid/shuttle.mp4" type="video/mp4">
-		</video>
+	
+		<nav class="animated zoomIn navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+			<div id="navbar-container" class="container">
+				<div id="navbar-top-menu">
+					<div class="d-flex align-items-center justify-content-between">
+						<a class="navbar-brand" href="index.html">
+							<div class="title-icon"></div>
+						</a>
+						<button class="navbar-toggler nexa" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+							Menu
+							<i class="fas fa-bars"></i>
+						</button>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarResponsive" style="height: auto;">
+					<ul id="navbar-buttons" class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Apply</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sponsor</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	
+		<div class="header-container">
+			<div class="video-container">
+				<video autoplay muted loop>
+					<source src="resources/vid/shuttle.mp4#t=22" type="video/mp4">
+				</video>
+			</div>
+			<div class="text-container">
+				<div class="text-wrapper">
+					<h1 class="slogan animated zoomIn noselect">Ignite British Rocketry.</h1>
+					<button class="titleName animated zoomIn btn-primary">Connect</button>
+				</div>
+			</div>
+		</div>
 	</body>
 	
 	<script src="js/custom.js"></script>
+	<script src="js/bootstrap.js"></script>
 
 </html>

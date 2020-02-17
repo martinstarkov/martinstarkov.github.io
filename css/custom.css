@@ -1,13 +1,118 @@
-html, body {
+* {
 	margin: 0;
 	padding: 0;
-	height: 100%;
+}
+body {}
+.header-container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	padding: 1px;
+}
+.video-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+video {
+	position: absolute;
+	z-index: -100;
 	width: 100%;
 }
-#frontPageVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+.text-container{
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.text-wrapper{
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+nav {
+	animation-delay: 0s;
+	animation-duration: 2s!important;
+}
+.nav-link {
+	font-family: 'mandalore';
+	letter-spacing: 2px;
+	color: white!important;
+}
+.nav-link:hover {
+	color: #132046!important;
+}
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+@font-face {
+	font-family: 'mandalore';
+	src: url('../fonts/mandalore.eot');
+	src: url('../fonts/mandalore.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/mandalore.woff') format('woff'),
+		url('../fonts/mandalore.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.titleName, .slogan {
+	font-size: 2em;
+	color: white;
+	letter-spacing: 2px;
+	animation-delay: 3s;
+	font-family: 'mandalore';
+	width: 100%;
+	text-align: center;
+}
+.slogan {
+	animation-duration: 1s;
+}
+.titleName {
+	color: white;
+	background: #132046;
+	border-color: white;
+	font-size: 1em;
+	animation-delay: 5s;
+	width: 10%;
+}
+.titleName:hover {
+	background: #111C3F;
+	border-color: #898FA2;
+}
+.titleName:focus {
+	box-shadow: none;
+}
+.titleName:not(:disabled):not(.disabled):active {
+	background: #111C3F;
+	border-color: #898FA9;
+}
+.title-icon {
+	opacity: 0.75;
+	width: 300px;
+	height: 65.6px;
+	background: url("../resources/img/title.png");
+	background-size: 300px 65.6px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.title-icon:hover {
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	opacity: 1;
 }

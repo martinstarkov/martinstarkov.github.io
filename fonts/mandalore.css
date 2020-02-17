@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'mandalore';
+    src: url('fonts/mandalore.eot');
+    src: url('fonts/mandalore.eot') format('embedded-opentype'),
+         url('fonts/mandalore.woff2') format('woff2'),
+         url('fonts/mandalore.woff') format('woff'),
+         url('fonts/mandalore.ttf') format('truetype'),
+         url('fonts/mandalore.svg#mandalore') format('svg');
+}
