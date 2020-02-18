@@ -27,9 +27,9 @@ $('.projects_link').click(function() {
   }, 1500);
 });
 
-$('.skills_link').click(function() {
+$('.cv_link').click(function() {
   setTimeout(function() {
-    $('.skills').addClass('fadeIn');
+    $('.cv').addClass('fadeIn');
   }, 1500);
 });
 

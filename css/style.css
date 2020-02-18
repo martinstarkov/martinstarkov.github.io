@@ -6,7 +6,7 @@
   margin: 0;
 }
 body {
-	background: #272121;
+	background: white;
   /* background-image: url("../img/shuttle.png")!important; */
 }
 
@@ -14,7 +14,7 @@ body {
   display: none;
 }
 .page__style {
-  background: #6d326d;
+  background: #ccc;
   font-family: 'Open Sans', sans-serif;
   position: fixed;
   top: 0;
@@ -136,20 +136,20 @@ video {
 .home {
   /* background: #5da9e9; */
   /* background-image: url("../img/shuttle.png")!important; */
-  background: #272121;
+  background: #ccc;
 }
 .projects {
-  background: #bd5de9;
+  /* background: #bd5de9; */
+  background: #ccc;
 }
-.skills {
-  background: #5de974;
-}
-.about {
-  background: #fb9b33;
+.cv {
+  /* background: #fb9b33; */
+  background: #dbe5ec;
 }
 .contact {
   /* background: #c9cdc0; */
-  background: #363333;
+  /* background: #363333; */
+  background: #afb2b8;
 }
 /* Mobile */
 @media only screen and (max-width: 991px) {
