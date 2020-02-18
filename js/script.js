@@ -59,3 +59,4 @@ function slowWriter(id, text, counter, delay) {
 
 setTimeout(function(){ slowWriter("title-name", txt1, 0, 50) }, 1000);
 setTimeout(function(){ slowWriter("description", txt2, 0, 40) }, 1500);
+setTimeout(function(){ $("#description").css("background", "black") }, 7300);

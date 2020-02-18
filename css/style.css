@@ -73,6 +73,7 @@ video {
 	font-family: 'Open Sans', sans-serif;
 }
 #description {
+	padding: 0.8em;
 	margin: 0 2em;
 }
 .headshot {
@@ -156,6 +157,23 @@ video {
 		display: flex;
 	}
 	.navbar-border-line {
+		display: none;
+	}
+	.headshot {
+		margin: 0;
+	}
+	.custom-nav a {
+		font-size: 1.6em;
+	}
+	#title-name {
+		font-size: 4em;
+	}
+	#description {
+		padding: 0.5em;
+		margin: 0;
+		font-size: 2em;
+	}
+	.spacing-break {
 		display: none;
 	}
 }
