@@ -1,0 +1,241 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+	background: #272121;
+  /* background-image: url("../img/shuttle.png")!important; */
+}
+
+.hide {
+  display: none;
+}
+.page__style {
+  background: #6d326d;
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: auto auto;
+  overflow: hidden;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+.page__style .page__description {
+  text-align: center;
+}
+.header-container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	padding: 1px;
+}
+.video-container {
+	position: absolute;
+	height: 100vh;
+}
+video {
+	object-fit: cover;
+	background-size: 100%;
+	height:100%; 
+	width:100%;
+}
+.text-container {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.text-wrapper {
+	animation-delay: 0s;
+	animation-duration: 2s;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+#title-name, #description {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+#description {
+	margin: 0 2em;
+}
+.headshot {
+	opacity: 0.9;
+    display: block;
+    height: 20em;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin: 0 0 0 4em;
+    display: inline-block;
+	border: 5px solid white;
+}
+
+.image-container {
+    margin: 1% 0 1% 2%;
+    float: left;
+    width: 32%;
+}
+
+.custom-nav {
+    background-color: #282828;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    cursor: default;
+}
+.custom-nav ul {
+    margin: 0;
+}
+.custom-nav li {
+    display: inline-block;
+}
+.custom-nav a {
+	color: #fff;
+    padding: 0.2em 1em 0.2em 1em;
+    margin: 0.6em 0.2em 0.6em 0.2em;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    outline: 0;
+}
+.custom-nav a:hover {
+	color: #5da9e9!important;
+}
+.active-button {
+	color: #5da9e9!important;
+}
+.animate_content {
+  animation: animate 3s ease;
+}
+.fadeIn {
+  z-index: 10;
+}
+.home {
+  /* background: #5da9e9; */
+  /* background-image: url("../img/shuttle.png")!important; */
+  background: #272121;
+}
+.projects {
+  background: #bd5de9;
+}
+.skills {
+  background: #5de974;
+}
+.about {
+  background: #fb9b33;
+}
+.contact {
+  /* background: #c9cdc0; */
+  background: #363333;
+}
+/* Mobile */
+@media only screen and (max-width: 991px) {
+	.navbar {
+		display: flex;
+	}
+	.navbar-border-line {
+		display: none;
+	}
+}
+@-moz-keyframes animate {
+  10% {
+    transform: scale(1, 0.002);
+  }
+  35% {
+    transform: scale(0.2, 0.002);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2, 0.002);
+    opacity: 0;
+  }
+  85% {
+    transform: scale(1, 0.002);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes animate {
+  10% {
+    transform: scale(1, 0.002);
+  }
+  35% {
+    transform: scale(0.2, 0.002);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2, 0.002);
+    opacity: 0;
+  }
+  85% {
+    transform: scale(1, 0.002);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-o-keyframes animate {
+  10% {
+    transform: scale(1, 0.002);
+  }
+  35% {
+    transform: scale(0.2, 0.002);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2, 0.002);
+    opacity: 0;
+  }
+  85% {
+    transform: scale(1, 0.002);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes animate {
+  10% {
+    transform: scale(1, 0.002);
+  }
+  35% {
+    transform: scale(0.2, 0.002);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2, 0.002);
+    opacity: 0;
+  }
+  85% {
+    transform: scale(1, 0.002);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
