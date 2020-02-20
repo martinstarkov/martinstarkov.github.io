@@ -73,7 +73,10 @@ video {
 }
 #description {
 	padding: 0.8em;
+}
+#description-background {
 	margin: 0 2em;
+	transition: background-color 3s;
 }
 .headshot {
 	opacity: 0.9;
@@ -173,8 +176,10 @@ video {
 	}
 	#description {
 		padding: 0.5em;
-		margin: 0;
 		font-size: 1.5em;
+	}
+	#description-background {
+		margin: 0!important;
 	}
 	.spacing-break {
 		display: none;
