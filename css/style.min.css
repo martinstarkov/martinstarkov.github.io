@@ -59,6 +59,7 @@ a {
 
 .main-content .info-box .background {
     background-color: white;
+    opacity: 0.9;
     border-radius: 1vh;
     border: 1vh black solid;
     padding: 1vh;
