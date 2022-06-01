@@ -61,7 +61,7 @@ a {
     background-color: white;
     opacity: 0.9;
     border-radius: 1vh;
-    border: 1vh black solid;
+    border: 2vh black solid;
     padding: 1vh;
 }
 
@@ -84,7 +84,7 @@ a {
 
 .main-content .profile .rounded-circle {
     background-color: black;
-    border: 1vh solid black;
+    border: 2vh solid black;
 }
 
 .main-content .name {
