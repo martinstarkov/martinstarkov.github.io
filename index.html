@@ -3,196 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Martin Starkov</title>
+    <title>Home</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="icon" type="image/ico" href="favicon.ico" sizes="32x32" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
+    <link rel="stylesheet" href="css/custom.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-
-    <div class="page__style projects" style="overflow-y:auto;">
-        <div class="page__description">
-            <div id="projects">
-                <nav class="custom-nav noselect">
-                    <ul>
-                        <li><a href="#" class="btn_nav home_link">Home</a></li>
-                    </ul>
-                </nav>
-                <div class="header-container" style="margin-top:100px;">
-                    <div class="text-container">
-                        <div class="text-wrapper animated zoomIn">
-                            <div class="container">
+    <div class="text-wrapper animated zoomIn">
+        <div class="container-fluid-md">
+            <div class="row main-content">
+                <div class="col-md-6 info-table">
+                    <div class="info-box">
+                        <div class="background">
+                            <div class="info-content">
                                 <div class="row">
-                                    <div class="container">
-                                        <div class="border-box">
-                                            <div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
-                                                <div class="col-lg-6 workshop-item-image">
-                                                    <video autoplay muted loop class="project-video" style="width:50vw;height:100%;">
-                                        <source src="vid/tunnel_cropped.mp4" type="video/mp4">
-                                    </video>
-                                                </div>
-                                                <div class="col-lg-6 workshop-item-textbox">
-                                                    <div class="bg-black text-center h-100 project">
-                                                        <div class="d-flex h-100">
-                                                            <div class="project-text w-100 my-auto text-center text-lg-left">
-                                                                <h4 class="sub-heading inline orange">Wind Turbine</h4>
-                                                                <p class="mb-0 white nexa" style="font-size:32px;">This project was for a university class. The aim was to extract power from the wind using a turbine built from scratch. My job was to design the structural elements of the turbine, such as
-                                                                    the gear box, blade hub, casing, and more. The video shows a test of the turbine inside the university's wind tunnel.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-box">
-                                            <div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
-                                                <div class="col-lg-6 workshop-item-image">
-                                                    <video autoplay muted loop class="project-video" style="width:50vw;height:100%;">
-                                                        <source src="vid/spin_to_win.mp4" type="video/mp4">
-                                                    </video>
-                                                </div>
-                                                <div class="col-lg-6 order-lg-first workshop-item-textbox">
-                                                    <div class="bg-black text-center h-100 project">
-                                                        <div class="d-flex h-100">
-                                                            <div class="project-text w-100 my-auto text-center text-lg-right">
-                                                                <h4 class="sub-heading inline orange nexa">Bayes Hopper Vehicle</h4>
-                                                                <p class="mb-0 white nexa" style="font-size:32px;">The aim of this project was to create a thrust-vector-controlled lander vehicle for the student rocketry team Endeavour. My role was designing some of the structural elements of the vehicle,
-                                                                    creating a CAD of them, as well as writing the flight computer software. The video shows the hopper gimballing around its test stand. </p>
-                                                                <hr class="d-none d-lg-block mb-0 mr-0">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-box">
-                                            <div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
-                                                <div class="col-lg-6 workshop-item-image">
-                                                    <video autoplay muted loop class="project-video" style="width:60vw;height:100%;">
-                                        <source src="vid/fluid_simulation.mp4" type="video/mp4">
-                                    </video>
-                                                </div>
-                                                <div class="col-lg-6 workshop-item-textbox">
-                                                    <div class="bg-black text-center h-100 project">
-                                                        <div class="d-flex h-100">
-                                                            <div class="project-text w-100 my-auto text-center text-lg-left">
-                                                                <h4 class="sub-heading inline orange">Fluid Simulation</h4>
-                                                                <p class="mb-0 white nexa" style="font-size:32px;">This simulation was part of a work project for Codeplay. The goal was to use SYCL (parallel computing api) to accelerate the solution of the Navier-Stokes equations in 2 dimensions. I wrote
-                                                                    the simulation and optimized it work with very fine resolutions. The video shows how granular the fluid is while maintaining a high framerate.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-box">
-                                            <div class="row justify-content-center no-gutters mb-5 mb-lg-0 workshop-item">
-                                                <div class="col-lg-6 workshop-item-image">
-                                                    <video autoplay muted loop class="project-video" style="width:50vw;height:100%;">
-                                                        <source src="vid/game.mp4" type="video/mp4">
-                                                    </video>
-                                                </div>
-                                                <div class="col-lg-6 order-lg-first workshop-item-textbox">
-                                                    <div class="bg-black text-center h-100 project">
-                                                        <div class="d-flex h-100">
-                                                            <div class="project-text w-100 my-auto text-center text-lg-right">
-                                                                <h4 class="sub-heading inline orange nexa">Game Engine</h4>
-                                                                <p class="mb-0 white nexa" style="font-size:32px;">Written in C++, the Protegon 2D game engine is something I have spent multiple years working on. It is how I taught myself programming and I have iterated and improved it over time. Currently
-                                                                    it supports drawing objects, animations, tile maps, bullet collision, physics, interfaces, scene management, and more. The video demonstrates a character moving through a procedurally
-                                                                    generated world.</p>
-                                                                <hr class="d-none d-lg-block mb-0 mr-0">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-12 name noselect">
+                                        Martin Starkov
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    <div class="page__style home">
-        <div class="page__description">
-            <div id="home">
-                <div class="header-container">
-                    <div class="video-container">
-                        <video playsinline autoplay muted loop class="background-video frontpagevideo">
-                            <source src="vid/shuttle.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="text-wrapper animated zoomIn">
-                        <div class="container-fluid-md">
-                            <div class="row main-content">
-                                <div class="col-md-6 info-table">
-                                    <div class="info-box">
-                                        <div class="background">
-                                            <div class="info-content">
-                                                <div class="row">
-                                                    <div class="col-md-12 name noselect">
-                                                        Martin Starkov
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12 profession noselect">
-                                                        Engineer | Programmer
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12 links noselect">
-                                                        <a class="info-item noselect" href="mailto:emailregisterlogin@gmail.com">
-                                                Email
+                                <div class="row">
+                                    <div class="col-md-12 profession noselect">
+                                        Engineer | Programmer
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 noselect">
+                                        <hr>
+                                        <a class="info-item noselect" href="mailto:emailregisterlogin@gmail.com">
+                                                Contact
                                             </a>
-                                                        <a class="info-item noselect" href="https://github.com/martinstarkov/CV/blob/master/Martin_Starkov_CV_2021.pdf">
-                                                CV
-                                            </a>
-                                                        <a class="info-item noselect" href="https://github.com/martinstarkov">
+                                        <a class="info-item noselect" href="https://github.com/martinstarkov">
                                                 GitHub
                                             </a>
-                                                        <a class="info-item noselect btn_nav projects_link" href="#">
+                                        <a class="info-item noselect btn_nav projects_link" href="projects.html">
                                                 Projects
                                             </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="profile noselect">
-                                        <img src="img/Martin_cropped.JPEG" class="img-fluid rounded-circle">
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile noselect">
+                        <img src="img/martin_cropped.JPEG" class="img-fluid rounded-circle">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src='js/bootstrap.min.js'></script>
-    <script src='js/jquery.min.js'></script>
-    <script src="js/script.js"></script>
-
 </body>
 
 </html>
