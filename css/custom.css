@@ -1,0 +1,51 @@
+body {
+    background-image: url("../img/sky.jpg")!important;
+    background-position: top left;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-deck {
+    margin: 20px;
+}
+
+.card-columns {
+    margin-top: 10px;
+}
+
+.home-nav {
+    background-color: #282828;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    cursor: default;
+}
+
+.home-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.home-nav li {
+    display: inline-block;
+}
+
+.home-nav a {
+    color: #fff;
+    padding: 0.2em 1em 0.2em 1em;
+    margin: 0.6em 0.2em 0.6em 0.2em;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    outline: 0;
+}
+
+.home-nav a:hover {
+    color: #5da9e9!important;
+}
