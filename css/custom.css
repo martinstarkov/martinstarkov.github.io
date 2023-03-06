@@ -11,7 +11,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: none!important;
-    background-image: url('../img/sky1.jpg')!important;
+    background-image: url('../img/background/sky1.png')!important;
     background-size: cover;
     background-position: center;
 }
@@ -93,7 +93,7 @@ body {
 }
 
 .projects-background {
-    background-image: url("../img/sky4.jpg")!important;
+    background-image: url("../img/background/sky2.png")!important;
     background-position: top left;
     background-size: cover;
     margin: 0px;
