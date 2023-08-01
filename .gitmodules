@@ -1,0 +1,6 @@
+[submodule "modules/thesis"]
+	path = modules/thesis
+	url = https://github.com/martinstarkov/BEng-thesis.git
+[submodule "modules/group_thesis"]
+	path = modules/group_thesis
+	url = https://github.com/martinstarkov/hoberman-group-thesis.git
