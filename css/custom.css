@@ -10,7 +10,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    background-color: none!important;
+    background: black;
     background-image: url('../img/background/sky1.png')!important;
     background-size: cover;
     background-position: center;
@@ -93,7 +93,9 @@ body {
 }
 
 .projects-background {
-    background-image: url("../img/background/sky2.png")!important;
+    background-image: none!important;
+    background-color: black!important;
+    /* background-image: url("../img/background/sky2.png")!important; */
     background-position: top left;
     background-size: cover;
     margin: 0px;
@@ -138,8 +140,10 @@ a:hover {
 }
 
 .card {
-    background-color: #000;
-    border: 5px solid black;
+    border: none;
+    background-color: transparent!important;
+    /* background-color: #000; */
+    /* border: 7px solid #444; */
 }
 
 .card-title {
@@ -153,6 +157,10 @@ a:hover {
 
 .card-footer {
     background-color: #000;
+    border-left: 5px solid #282828;
+    border-right: 5px solid #282828;
+    border-bottom: 5px solid #282828;
+    border-top: none;
 }
 
 .text-muted {
@@ -160,7 +168,7 @@ a:hover {
 }
 
 .card-deck {
-    margin: 20px;
+    margin: 30px;
 }
 
 .card-columns {
@@ -176,6 +184,7 @@ a:hover {
     width: 100%;
     z-index: 10000;
     cursor: default;
+    border-bottom: 5px solid #444;
 }
 
 .home-nav ul {
@@ -201,4 +210,21 @@ a:hover {
 
 .home-nav a:hover {
     color: #5da9e9!important;
+}
+
+a {
+    color: #ce9b5d;
+}
+
+a:hover {
+    color: #ab6a1a;
+}
+
+.carousel-inner {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+img {
+    background-color: #ce9b5d;
 }
