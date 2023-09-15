@@ -13,7 +13,7 @@ body, html {
     overflow-y: hidden;
     height: 100vh;
     background: black;
-    background-image: url('../img/background/sky1.png');
+    background-image: url('../resources/background/sky1.png');
     background-size: cover;
 }
 
@@ -93,7 +93,7 @@ body, html {
         width: 80%;
         opacity: 0.9;
         background-color: white;
-        border-radius: 1vh;
+        border-radius: 0;
         border: 2vh black solid;
     }
     .circle-image {
@@ -157,7 +157,7 @@ body, html {
         width: 55vh;
         opacity: 0.9;
         background-color: white;
-        border-radius: 1vh;
+        border-radius: 0;
         border: 2vh black solid;
     }
     .circle-image {
@@ -186,7 +186,7 @@ body, html {
 .projects-background {
     background-image: none;
     background-color: black;
-    /* background-image: url("../img/background/sky2.png")!important; */
+    /* background-image: url("../resources/background/sky2.png")!important; */
     background-position: top left;
     background-size: cover;
     margin: 0px;
@@ -214,6 +214,8 @@ body, html {
     border-right: 5px solid #282828;
     border-bottom: 5px solid #282828;
     border-top: none;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
 }
 
 .text-muted {
@@ -272,11 +274,6 @@ a {
 a:hover {
     color: #ab6a1a;
     text-decoration: none;
-}
-
-.carousel-inner {
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
 }
 
 img {
