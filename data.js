@@ -1,6 +1,12 @@
 var json_object = 
 [
   {
+    "title": "University Project: Motor Rehabiliation Serious Game",
+    "image_folder": "serious_game",
+    "images": ["1.gif"],
+    "completion": "Ongoing project (November 2023 → present)"
+  },
+  {
     "title": "Personal Project: Custom C++ Game Engine",
     "link": "https://github.com/martinstarkov/protegon",
     "image_folder": "game_engine",
@@ -50,7 +56,7 @@ var json_object =
     "title": "Personal Project: Robust Collision System",
     "link": "https://github.com/martinstarkov/protegon/blob/main/src/physics/collision.cpp",
     "image_folder": "collision_detection",
-    "images": ["1.gif", "2.gif", "3.png"],
+    "images": ["1.png", "2.gif", "3.gif", "4.gif", "5.gif"],
     "completion": "Completed in September, 2022"
   },
   {
