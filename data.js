@@ -1,9 +1,10 @@
 var json_object = [
   {
     title: "University Project: Motor Rehabiliation Serious Game",
+    link: "https://pizzicato-game.github.io/",
     image_folder: "serious_game",
     images: ["1.gif", "2.png", "3.gif"],
-    completion: "Ongoing project (November 2023 → present)",
+    completion: "Completed in February, 2024",
   },
   {
     title: "Personal Project: Custom C++ Game Engine",
