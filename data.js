@@ -2,7 +2,7 @@ var json_object = [
   {
     title: "University Project: Motor Rehabiliation Serious Game",
     link: "https://pizzicato-game.github.io/",
-    image_folder: "serious_game",
+    image_folder: "pizzicato",
     images: ["1.gif", "2.png", "3.gif"],
     completion: "Completed in February, 2024",
   },
@@ -49,7 +49,7 @@ var json_object = [
     title: "Engineering Group Thesis: Metamaterial CVT Gear System",
     link: "modules/group_thesis/hoberman_group_thesis.pdf",
     image_folder: "hoberman_thesis",
-    images: [["1.gif", "padding: 17.4% 0%;"]],
+    images: ["1.gif"],
     completion: "Completed in November, 2022",
   },
   {
@@ -106,5 +106,4 @@ var json_object = [
     images: ["1.gif", "2.gif"],
     completion: "Completed in January, 2020",
   },
-  {},
 ];

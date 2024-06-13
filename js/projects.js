@@ -1,79 +1,113 @@
-$( document ).ready(function() {
+var tmp = "";
 
-  var tmp = '';
+for (var index = 0; index < json_object.length; ++index) {
+  var number_of_images_per_row = 3;
+  var new_row = index % number_of_images_per_row == 0;
+  var last_element = (index + 1) % number_of_images_per_row == 0;
 
-  for (var index = 0; index < json_object.length; ++index) {
-    var new_row = index % 4 == 0;
-    var last_element = (index + 1) % 4 == 0;
+  var value = json_object[index];
 
-    // Add this tag for every 4th element including 0.
-    if (new_row && !last_element) {
-      tmp += '<div class="card-deck">'
-    }
+  tmp += '<div class="masonry-brick">';
+  tmp += '<div class="masonry-content">';
+  // Consider empty {} json objects as invisible blank grid occupiers.
+  // Used to ensure that each entry takes up 1/Xth of a row.
+  if (!value.hasOwnProperty("title")) {
+    tmp += '<div class="card" style="visibility: hidden;">';
 
-    var value = json_object[index];
+    tmp += "</div>";
+  } else {
+    tmp += '<div class="card" id="card-' + index.toString() + '">';
 
-    // Consider empty {} json objects as invisible blank grid occupiers. 
-    // Used to ensure that each entry takes up 1/4th of a row.
-    if (!value.hasOwnProperty("title")) {
-      tmp += '<div class="card" style="visibility: hidden;">'
-      tmp += '</div>'
-    } else {
+    tmp +=
+      ' <div id="carousel-' +
+      index.toString() +
+      '" class="card-img-top carousel slide carousel-fade" data-ride="carousel"> ';
+    tmp += '  <div class="carousel-inner">';
 
-      tmp += '<div class="card">'
-      tmp += ' <div id="carousel-' + index.toString() + '" class="card-img-top carousel slide" data-ride="carousel"> '
-      tmp += '  <div class="carousel-inner">'
-
-      // Add each image to the carousel.
-      for (var image_index = 0; image_index < value.images.length; image_index++) {
-        if (image_index == 0) {
-          tmp += '   <div class="carousel-item active">'
-        } else {
-          tmp += '   <div class="carousel-item">'
-        }
-        // An image can be styled to add padding by replacing the string with an
-        // array with first element filepath and second element styling string.
-        if (value.images[image_index].constructor == [].constructor) {
-          tmp += '    <img class="d-block w-100" src="resources/' + value.image_folder + '/' + value.images[image_index][0] + '" style="' + value.images[image_index][1] + '">'
-        } else if (value.images[image_index].constructor == "".constructor) {
-          tmp += '    <img class="d-block w-100" src="resources/' + value.image_folder + '/' + value.images[image_index] + '">'
-        }
-        tmp += '   </div>'
-      }
-
-      tmp += '  </div>'
-      // Only add carousel if there is more than one image.
-      if (value.images.length > 1) {
-        tmp += '  <a class="carousel-control-prev invert" href="#carousel-' + index.toString() + '" role="button" data-slide="prev">'
-        tmp += '   <span class="carousel-control-prev-icon" aria-hidden="true"></span>'
-        tmp += '   <span class="sr-only">Previous</span>'
-        tmp += '  </a>'
-        tmp += '  <a class="carousel-control-next invert" href="#carousel-' + index.toString() + '" role="button" data-slide="next">'
-        tmp += '   <span class="carousel-control-next-icon" aria-hidden="true"></span>'
-        tmp += '   <span class="sr-only">Next</span>'
-        tmp += '  </a>'
-      }
-      tmp += ' </div>'
-      tmp += ' <div class="card-body">'
-      // Add links to title text if applicable.
-      if (value.hasOwnProperty("link")) {
-        tmp += '  <h5 class="card-title"><a href="' + value.link + '">' + value.title + '</a></h5>'
+    // Add each image to the carousel.
+    for (
+      var image_index = 0;
+      image_index < value.images.length;
+      image_index++
+    ) {
+      if (image_index == 0) {
+        tmp += '   <div class="carousel-item active">';
       } else {
-        tmp += '  <h5 class="card-title">' + value.title + '</h5>'
+        tmp += '   <div class="carousel-item">';
       }
-      tmp += ' </div>'
-      tmp += ' <div class="card-footer">'
-      tmp += '  <small class="text-muted">' + value.completion + '</small>'
-      tmp += ' </div>'
-      tmp += '</div>'
-        
+      // Only add carousel click if there is more than one image.
+      if (value.images.length > 1) {
+        tmp +=
+          ' <a href="#carousel-' +
+          index.toString() +
+          '" role="button" data-slide="next" id="carousel-click-next-' +
+          index.toString() +
+          '">';
+      }
+      tmp +=
+        '    <img decoding="async" class="d-block w-100" src="resources/' +
+        value.image_folder +
+        "/";
+
+      // An image can be styled to add padding by replacing the string with an
+      // array with first element filepath and second element styling string.
+      if (value.images[image_index].constructor == "".constructor) {
+        tmp += value.images[image_index] + '">';
+      } else if (value.images[image_index].constructor == [].constructor) {
+        tmp +=
+          value.images[image_index][0] +
+          '" style="' +
+          value.images[image_index][1] +
+          '">';
+      }
+      if (value.images.length > 1) {
+        tmp += "  </a>";
+      }
+      tmp += "</div>";
     }
 
-    // Add this tag for every 3rd element excluding 0.
-    if (!new_row && last_element) {
-      tmp += '</div>'
+    tmp += "</div>";
+    tmp += " </div>";
+    tmp += ' <div class="card-body">';
+    // Add links to title text if applicable.
+    if (value.hasOwnProperty("link")) {
+      tmp +=
+        '  <h5 class="card-title"><a href="' +
+        value.link +
+        '">' +
+        value.title +
+        "</a></h5>";
+    } else {
+      tmp += '  <h5 class="card-title">' + value.title + "</h5>";
     }
+    tmp += " </div>";
+    tmp += ' <div class="card-footer">';
+    tmp += '  <small class="text-muted">' + value.completion + "</small>";
+    tmp += " </div>";
+    tmp += "</div>";
+    tmp += "</div>";
+    tmp += "</div>";
   }
-  
-  $('#card-decks').prepend(tmp);
+}
+
+$("#card-decks").prepend(tmp);
+
+$(document).ready(function () {
+  jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 0; // 2 seconds
 });
+
+for (var index = 0; index < json_object.length; ++index) {
+  var card = document.getElementById("card-" + index.toString());
+  new ResizeObserver(function () {
+    resizeAllMasonryItems();
+  }).observe(card);
+}
+
+/* Resize all the grid items on the load and resize events */
+var masonryEvents = ["load", "resize"];
+masonryEvents.forEach(function (event) {
+  window.addEventListener(event, resizeAllMasonryItems);
+});
+
+/* Do a resize once more when all the images finish loading */
+waitForImages();
