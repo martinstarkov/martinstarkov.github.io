@@ -1,16 +1,35 @@
 var json_object = [
   {
-    title: "University Project: Motor Rehabiliation Serious Game",
+    title: "University Project: Fault Tolerant Solar Panel Drive",
+    image_folder: "solar_panel_drive",
+    images: ["1.gif"],
+    completion: "Ongoing project",
+  },
+  {
+    title: "Pixel Game Jam 2024 Entry: AquaLife",
+    link: "https://bicyclemice.itch.io/aqualife",
+    image_folder: "aqualife",
+    images: ["0.png", "2.png", "3.png", "1.png"],
+    completion: "Completed in May, 2024",
+  },
+  {
+    title: "University Project: Maze Navigating Drone",
+    image_folder: "maze_navigating_drone",
+    images: ["2.gif", "1.gif"],
+    completion: "Completed in March, 2024",
+  },
+  {
+    title: "Pizzicato: Motor Rehabiliation Serious Game",
     link: "https://pizzicato-game.github.io/",
     image_folder: "pizzicato",
-    images: ["1.gif", "2.png", "3.gif"],
+    images: ["5.gif", "1.png", "4.gif"],
     completion: "Completed in February, 2024",
   },
   {
     title: "Personal Project: Custom C++ Game Engine",
     link: "https://github.com/martinstarkov/protegon",
-    image_folder: "game_engine",
-    images: ["1.gif", "2.gif", "3.gif", "4.gif", "5.gif", "6.gif", "7.gif"],
+    image_folder: "protegon",
+    images: ["8.gif", "2.png", "7.gif"],
     completion: "Ongoing long-term project (2019 → present)",
   },
   {
