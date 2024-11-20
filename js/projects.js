@@ -21,7 +21,7 @@ for (var index = 0; index < json_object.length; ++index) {
     tmp +=
       ' <div id="carousel-' +
       index.toString() +
-      '" class="card-img-top carousel slide carousel-fade" data-ride="carousel"> ';
+      '" class="card-img-top carousel slide carousel-fade" data-ride="carousel" data-interval="14000"> ';
     tmp += '  <div class="carousel-inner">';
 
     // Add each image to the carousel.

@@ -1,9 +1,23 @@
 var json_object = [
   {
+    title: "Brackeys Game Jam 2024 Entry: Storm Chaser",
+    link: "https://bicyclemice.itch.io/storm-chaser",
+    image_folder: "brackeys_jam_2024",
+    images: ["1.png", "2.png", "3.png", "4.png"],
+    completion: "Completed in September, 2024",
+  },
+  {
+    title: "GMTK 2024 Game Jam Entry: Barkin Madness",
+    link: "https://bicyclemice.itch.io/barkin-madness",
+    image_folder: "gmtk_jam_2024",
+    images: ["1.png", "2.png"],
+    completion: "Completed in August, 2024",
+  },
+  {
     title: "University Project: Fault Tolerant Solar Panel Drive",
     image_folder: "solar_panel_drive",
-    images: ["1.gif"],
-    completion: "Ongoing project",
+    images: ["1.webm", "1.jpg", "1.gif", "2.jpg", "3.jpg"],
+    completion: "Completed in July, 2024",
   },
   {
     title: "Pixel Game Jam 2024 Entry: AquaLife",
