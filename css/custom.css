@@ -10,6 +10,16 @@ html {
   padding: 0;
 }
 
+.btn-secondary {
+  background-color: #212224;
+  border-color: #575b5f;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
 .front-background {
   overflow-y: hidden;
   height: 100vh;
@@ -222,13 +232,33 @@ html {
   border-bottom: 5px solid #282828;
   border-top: none;
   margin: 0;
-  padding: 1rem;
+  padding: 0.75rem;
   border-bottom-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .text-muted {
   color: #fff !important;
+}
+
+.card-footer .text-muted {
+  display: flex;
+  align-items: center;
+}
+
+.info-button {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 .card-deck {
@@ -318,8 +348,4 @@ img {
 
 .carousel-item img:hover {
   opacity: 0.75;
-}
-
-.info-button {
-  float: right;
 }

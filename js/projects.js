@@ -85,9 +85,9 @@ for (var index = 0; index < json_object.length; ++index) {
     tmp += ' <div class="card-footer">';
     tmp += '  <small class="text-muted">' + value.completion + "</small>";
     if (value.hasOwnProperty("info")) {
-      tmp += '<button type="button" class="btn btn-secondary info-button" data-container="body" data-toggle="popover" data-placement="top" data-content="';
+      tmp += '<a tabindex="0" class="btn btn-secondary info-button" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="';
       tmp += value.info;
-      tmp += '">?</button>';
+      tmp += '">i</a>';
     }
     tmp += " </div>";
     tmp += "</div>";
@@ -102,7 +102,10 @@ $(document).ready(function () {
   jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 0; // 2 seconds
   $(function () {
     $('[data-toggle="popover"]').popover()
-  })
+  });
+  $('.popover-dismiss').popover({
+    trigger: 'focus'
+  });
 });
 
 for (var index = 0; index < json_object.length; ++index) {
