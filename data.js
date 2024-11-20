@@ -2,9 +2,8 @@ var json_object = [
   {
     title: "University Project: Fault Tolerant Solar Panel Drive",
     image_folder: "solar_panel_drive",
-    images: ["1.webm", "2.webm"],
+    images: ["1.gif"],
     completion: "Ongoing project",
-    info: "This was a project where i did stuff and that stuff went well. we worked very hard on it :)"
   },
   {
     title: "Pixel Game Jam 2024 Entry: AquaLife",

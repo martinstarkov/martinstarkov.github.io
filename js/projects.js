@@ -44,23 +44,16 @@ for (var index = 0; index < json_object.length; ++index) {
           index.toString() +
           '">';
       }
-      tmp +=
-        '    <video playsinline autoplay muted loop class="d-block w-100" style="pointer-events: none;">';
-      tmp += '<source type="video/webm" src="resources/' +
-        value.image_folder +
-        "/";
-
-      // An image can be styled to add padding by replacing the string with an
-      // array with first element filepath and second element styling string.
-      if (value.images[image_index].constructor == "".constructor) {
-        tmp += value.images[image_index] + '">';
-      } else if (value.images[image_index].constructor == [].constructor) {
-        tmp +=
-          value.images[image_index][0] +
-          '" style="' +
-          value.images[image_index][1] +
-          '">';
+      // https://stackoverflow.com/questions/680929/how-to-extract-extension-from-filename-string-in-javascript
+      var re = /(?:\.([^.]+))?$/;
+      let extension = re.exec(value.images[image_index])[1];
+      if (extension == "webm") {
+        tmp += '<video playsinline autoplay muted loop class="d-block w-100" style="pointer-events: none;"><source type="video/webm"';
+      } else {
+        tmp += '<img decoding="async" class="d-block w-100"';
       }
+      tmp += 'src="resources/' + value.image_folder + "/" + value.images[image_index] + '">';
+
       if (value.images.length > 1) {
         tmp += "  </a>";
       }
@@ -84,11 +77,13 @@ for (var index = 0; index < json_object.length; ++index) {
     tmp += " </div>";
     tmp += ' <div class="card-footer">';
     tmp += '  <small class="text-muted">' + value.completion + "</small>";
+    tmp += '<a tabindex="0" class="btn btn-secondary info-button" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="';
     if (value.hasOwnProperty("info")) {
-      tmp += '<a tabindex="0" class="btn btn-secondary info-button" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="';
       tmp += value.info;
-      tmp += '">i</a>';
+    } else {
+      tmp += '" style="visibility:hidden;';
     }
+    tmp += '">i</a>';
     tmp += " </div>";
     tmp += "</div>";
     tmp += "</div>";
