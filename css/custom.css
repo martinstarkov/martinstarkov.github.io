@@ -221,6 +221,8 @@ html {
   border-right: 5px solid #282828;
   border-bottom: 5px solid #282828;
   border-top: none;
+  margin: 0;
+  padding: 1rem;
   border-bottom-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
@@ -316,4 +318,8 @@ img {
 
 .carousel-item img:hover {
   opacity: 0.75;
+}
+
+.info-button {
+  float: right;
 }

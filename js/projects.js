@@ -45,7 +45,8 @@ for (var index = 0; index < json_object.length; ++index) {
           '">';
       }
       tmp +=
-        '    <img decoding="async" class="d-block w-100" src="resources/' +
+        '    <video playsinline autoplay muted loop class="d-block w-100" style="pointer-events: none;">';
+      tmp += '<source type="video/webm" src="resources/' +
         value.image_folder +
         "/";
 
@@ -83,6 +84,11 @@ for (var index = 0; index < json_object.length; ++index) {
     tmp += " </div>";
     tmp += ' <div class="card-footer">';
     tmp += '  <small class="text-muted">' + value.completion + "</small>";
+    if (value.hasOwnProperty("info")) {
+      tmp += '<button type="button" class="btn btn-secondary info-button" data-container="body" data-toggle="popover" data-placement="top" data-content="';
+      tmp += value.info;
+      tmp += '">?</button>';
+    }
     tmp += " </div>";
     tmp += "</div>";
     tmp += "</div>";
@@ -94,6 +100,9 @@ $("#card-decks").prepend(tmp);
 
 $(document).ready(function () {
   jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 0; // 2 seconds
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
 });
 
 for (var index = 0; index < json_object.length; ++index) {
