@@ -115,43 +115,5 @@ var json_object = [
     images: ["1.webm"],
     completion: "Completed in July, 2022",
     info: "The theme of the game jam was 'Roll of the dice.' This was my first ever game jam. We made a simple game about a dice rolling toward a green square."
-  },
-  {
-    title: "GPU Optimized Fluid Simulation",
-    link: "https://github.com/codeplaysoftware/computecpp-sdk/tree/master/demos/fluid",
-    image_folder: "2022_fluid_simulation",
-    images: ["1.webm", "2.webm"],
-    completion: "Completed in June, 2022",
-    info: "While interning at Codeplay, I wrote demos (such as this fluid simulation) for SYCL and ComputeCpp, their parallel programming framework."
-  },
-  {
-    title: "Portable Wind Turbine",
-    image_folder: "2022_wind_turbine",
-    images: ["1.webm", "2.webm", "4.webm", "5.webm"],
-    completion: "Completed in April, 2022",
-    info: "I was responsible for the mechanical design and manufacturing of this group project wind turbine. It was subject to requirements such as fitting in a small storage container and being able to be assembled within 60 seconds. To reduce size while maintaining high RPM, I designed a stackable planetary gear."
-  },
-  {
-    title: "Gear Box CAD Design",
-    image_folder: "2021_gear_box",
-    images: ["1.webm"],
-    completion: "Completed in December, 2021",
-    info: "My first ever CAD assignment was a gigantic gear box for a hydropower station. Our team calculated out all the bearing and gear thicknesses to withstand the expected loading. Needless to say, the design was fairly crude.",
-  },
-  {
-    title: "Chemical Spill Simulation",
-    link: "https://github.com/martinstarkov/cmm3-project",
-    image_folder: "2021_chemical_spill_simulation",
-    images: ["1.gif", "2.gif"],
-    completion: "Completed in November, 2021",
-    info: "Program meant to simulate the mixing and spread of chemical spills for various initial conditions."
-  },
-  {
-    title: "CreatED Hack 2020 Website",
-    link: "https://createdhack.github.io/",
-    image_folder: "2020_created_hack",
-    images: ["1.webm"],
-    completion: "Completed in January, 2020",
-    info: "As part of The University of Edinburgh Robotics club, I worked as the lead web developer for the CreatED Hack 2020 webpage."
-  },
+  }
 ];
