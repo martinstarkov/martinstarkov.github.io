@@ -96,7 +96,7 @@ $("#card-decks").prepend(tmp);
 $(document).ready(function () {
   jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 0; // 2 seconds
   $(function () {
-    $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover({html:true})
   });
   $('.popover-dismiss').popover({
     trigger: 'focus'
