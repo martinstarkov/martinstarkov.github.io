@@ -16,7 +16,7 @@ var json_object = [
   {
     title: "Fault Tolerant Solar Panel Drive",
     image_folder: "2024_solar_panel_drive",
-    images: ["1.webm", "2.webm", "2.jpg", "3.jpg"],
+    images: ["3.jpg"],
     completion: "Completed in July, 2024",
   },
   {
