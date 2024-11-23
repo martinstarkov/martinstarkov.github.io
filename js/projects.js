@@ -21,7 +21,7 @@ for (var index = 0; index < json_object.length; ++index) {
     tmp +=
       ' <div id="carousel-' +
       index.toString() +
-      '" class="card-img-top carousel slide carousel-fade" data-ride="carousel" data-interval="14000"> ';
+      '" class="card-img-top carousel slide carousel-fade" data-interval="14000"> ';
     tmp += '  <div class="carousel-inner">';
 
     // Add each image to the carousel.
@@ -48,7 +48,7 @@ for (var index = 0; index < json_object.length; ++index) {
       var re = /(?:\.([^.]+))?$/;
       let extension = re.exec(value.images[image_index])[1];
       if (extension === "webm") {
-        tmp += '<video poster="resources/background/bg.png" class="d-block w-100" ';
+        tmp += '<video playsinline autoplay muted loop preload="auto" poster="resources/background/bg.png" class="d-block w-100" ';
       } else {
         tmp += '<img decoding="auto" class="d-block w-100" ';
       }
@@ -97,7 +97,6 @@ for (var index = 0; index < json_object.length; ++index) {
 $("#card-decks").prepend(tmp);
 
 $(document).ready(function () {
-  jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 0; // 2 seconds
   $(function () {
     $('[data-toggle="popover"]').popover({html:true})
   });
@@ -105,6 +104,11 @@ $(document).ready(function () {
     trigger: 'focus'
   });
 });
+
+$(window).load(function() {
+  // + any other carousel related stuff that has to wait for the images to complete loading
+  $('.carousel').carousel()
+})
 
 for (var index = 0; index < json_object.length; ++index) {
   var card = document.getElementById("card-" + index.toString());
