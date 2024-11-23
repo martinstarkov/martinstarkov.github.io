@@ -48,13 +48,13 @@ for (var index = 0; index < json_object.length; ++index) {
       var re = /(?:\.([^.]+))?$/;
       let extension = re.exec(value.images[image_index])[1];
       if (extension === "webm") {
-        //tmp += '<video playsinline autoplay muted loop preload="auto" poster="resources/background/bg.png" class="d-block w-100" style="pointer-events: none;" ';
+        tmp += '<video poster="resources/background/bg.png" class="d-block w-100" ';
       } else {
         tmp += '<img decoding="auto" class="d-block w-100" ';
-        tmp += 'src="resources/' + value.image_folder + "/" + value.images[image_index] + '">';
       }
+      tmp += 'src="resources/' + value.image_folder + "/" + value.images[image_index] + '">';
       if (extension === "webm") {
-        //tmp += '</video>';
+        tmp += '</video>';
       } else {
       }
       if (value.images.length > 1) {
