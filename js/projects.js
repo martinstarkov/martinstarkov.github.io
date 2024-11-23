@@ -56,7 +56,6 @@ for (var index = 0; index < json_object.length; ++index) {
       if (extension === "webm") {
         tmp += '</video>';
       } else {
-        tmp += '</img>';
       }
       if (value.images.length > 1) {
         tmp += "  </a>";
