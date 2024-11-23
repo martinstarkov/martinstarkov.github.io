@@ -47,7 +47,7 @@ for (var index = 0; index < json_object.length; ++index) {
       // https://stackoverflow.com/questions/680929/how-to-extract-extension-from-filename-string-in-javascript
       var re = /(?:\.([^.]+))?$/;
       let extension = re.exec(value.images[image_index])[1];
-      if (extension == "webm") {
+      if (extension === "webm") {
         tmp += '<video playsinline autoplay muted loop preload="auto" class="d-block w-100" style="pointer-events: none;"><source type="video/webm"';
       } else {
         tmp += '<img decoding="auto" class="d-block w-100"';
