@@ -1,7 +1,7 @@
 var tmp = "";
 
 for (var index = 0; index < json_object.length; ++index) {
-  tmp += '<div class="col-sm-12 col-lg-6 gallery-item"><div class="card" id="card-' + index.toString() + '"><div id="carousel-' +
+  tmp += '<div class="col-sm-12 col-lg-6 gallery-item" style="display:inline-block;float:none;"><div class="card" id="card-' + index.toString() + '"><div id="carousel-' +
     index.toString() +
     '" class="card-img-top carousel slide carousel-fade" data-interval="14000"><div class="carousel-inner">';
 
@@ -74,9 +74,6 @@ $(document).ready(function () {
   $('.popover-dismiss').popover({
     trigger: 'focus'
   });
-});
-
-$(window).load(function(){ 
   var $grid = $('#gallery').masonry({
     itemSelector : '.gallery-item',
     horizontalOrder: true
@@ -86,4 +83,3 @@ $(window).load(function(){
     $grid.masonry('layout');
   }); 
 });
-
