@@ -16,7 +16,7 @@ var json_object = [
   {
     title: "Fault Tolerant Solar Panel Drive",
     image_folder: "2024_solar_panel_drive",
-    images: ["1.webm", "2.webm", "2.jpg", "3.jpg"],
+    images: ["1.mp4", "2.mp4", "2.jpg", "3.jpg"],
     completion: "Completed in July, 2024",
   },
   {
@@ -29,7 +29,7 @@ var json_object = [
   {
     title: "Autonomous Maze Navigating Drone",
     image_folder: "2024_maze_navigating_drone",
-    images: ["1.webm", "2.webm"],
+    images: ["1.mp4", "2.mp4"],
     completion: "Completed in March, 2024",
   },
   {
@@ -50,7 +50,7 @@ var json_object = [
   {
     title: "Slingshot",
     image_folder: "2023_slingshot",
-    images: ["1.webm", "3.webm", "2.webm", "4.jpg"],
+    images: ["1.mp4", "3.mp4", "2.mp4", "4.jpg"],
     completion: "Completed in August, 2023",
     info: "During the summer, I decided to visit my highschool physics teacher and built him a slingshot as a gift. He loved it :)"
   },
@@ -65,7 +65,7 @@ var json_object = [
   {
     title: "Thrust-Vector-Controlled Lander Vehicle",
     image_folder: "2023_bayes_tvc",
-    images: ["1.webm", "2.webm", "3.webm"],
+    images: ["1.mp4", "2.mp4", "3.mp4"],
     completion: "Continued by successor after June, 2023",
     info: "During my time on the University of Edinburgh rocketry team, endeavour, I co-created a subteam which was responsible for developing and manufacturing a vehicle which would fly like a drone except instead of differential thrust it would use servos to direct the single electric ducted fan to control the thrust vector. We also built a test stand for the vehicle."
   },
@@ -112,7 +112,7 @@ var json_object = [
     title: "GMTK 2022 Game Jam Entry: Stroll of the Dice",
     link: "https://bicyclemice.itch.io/stroll-of-the-dice",
     image_folder: "2022_gmtk_jam",
-    images: ["1.webm"],
+    images: ["1.mp4"],
     completion: "Completed in July, 2022",
     info: "The theme of the game jam was 'Roll of the dice.' This was my first ever game jam. We made a simple game about a dice rolling toward a green square."
   },
@@ -120,21 +120,21 @@ var json_object = [
     title: "GPU Optimized Fluid Simulation",
     link: "https://github.com/codeplaysoftware/computecpp-sdk/tree/master/demos/fluid",
     image_folder: "2022_fluid_simulation",
-    images: ["1.webm", "2.webm"],
+    images: ["1.mp4", "2.mp4"],
     completion: "Completed in June, 2022",
     info: "While interning at Codeplay, I wrote demos (such as this fluid simulation) for SYCL and ComputeCpp, their parallel programming framework."
   },
   {
     title: "Portable Wind Turbine",
     image_folder: "2022_wind_turbine",
-    images: ["1.webm", "2.webm", "4.webm", "5.webm"],
+    images: ["1.mp4", "2.mp4", "4.mp4", "5.mp4"],
     completion: "Completed in April, 2022",
     info: "I was responsible for the mechanical design and manufacturing of this group project wind turbine. It was subject to requirements such as fitting in a small storage container and being able to be assembled within 60 seconds. To reduce size while maintaining high RPM, I designed a stackable planetary gear."
   },
   {
     title: "Gear Box CAD Design",
     image_folder: "2021_gear_box",
-    images: ["1.webm"],
+    images: ["1.mp4"],
     completion: "Completed in December, 2021",
     info: "My first ever CAD assignment was a gigantic gear box for a hydropower station. Our team calculated out all the bearing and gear thicknesses to withstand the expected loading. Needless to say, the design was fairly crude.",
   },
@@ -150,7 +150,7 @@ var json_object = [
     title: "CreatED Hack 2020 Website",
     link: "https://createdhack.github.io/",
     image_folder: "2020_created_hack",
-    images: ["1.webm"],
+    images: ["1.mp4"],
     completion: "Completed in January, 2020",
     info: "As part of The University of Edinburgh Robotics club, I worked as the lead web developer for the CreatED Hack 2020 webpage."
   },
