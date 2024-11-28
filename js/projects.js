@@ -81,27 +81,33 @@ $(document).ready(function () {
 var $grid = $('#gallery').imagesLoaded( function() {
   // init Masonry after all images have loaded
   $grid.masonry({
-    itemSelector : '.gallery-item',
-    horizontalOrder: true
   });
 });
 
 var postersLoaded = 0;
 
-$('video').on('loadeddata',function (){
+function waitForVidLoad(vids, callback) {
+  /* if no videos i.e. mobile mode only gifs and jpgs then call callback else masonry breaks.*/
+     if(vids.length === 0){
+         callback();
+     }
+ var vidsLoaded = 0;
+ vids.on('loadeddata', function() {
+   vidsLoaded++;
+   if (vids.length === vidsLoaded) {
+     callback();
+   }
+ });
+}
 
-  postersLoaded++;
-  
-  if (postersLoaded >= posterCount) {
-  
-  
-    $('#gallery').masonry({
+var $container = $('#gallery');
+var vids = $('#gallery').find('video');
+
+waitForVidLoad(vids, function() {
+  $container.imagesLoaded(function() {
+    $container.masonry({
       itemSelector : '.gallery-item',
       horizontalOrder: true
     });
-  
-      $('#gallery').masonry('reloadItems');
-      $('#gallery').masonry('layout');
-  
-  }
+  });
 });
