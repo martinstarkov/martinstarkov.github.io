@@ -212,9 +212,12 @@ html {
 }
 
 .card {
-  border: none;
+  width: 100%;
+  border: 0!important;
   background-color: transparent;
-  border: 7px solid transparent;
+  padding: 10px 0px;
+  display: inline-block!important;
+  break-inside: avoid;
 }
 
 .card-title {
@@ -261,14 +264,6 @@ html {
   border-radius: 2rem;
   display: flex;
   align-items: center;
-}
-
-.card-deck {
-  margin: 30px;
-}
-
-.card-columns {
-  margin-top: 10px;
 }
 
 .home-nav {
@@ -353,4 +348,18 @@ img {
 
 .carousel-item img:hover {
   opacity: 0.75;
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+  }
+}
+
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
 }
