@@ -105,11 +105,6 @@ $(document).ready(function () {
   });
 });
 
-$(window).load(function() {
-  // + any other carousel related stuff that has to wait for the images to complete loading
-  $('.carousel').carousel()
-})
-
 for (var index = 0; index < json_object.length; ++index) {
   var card = document.getElementById("card-" + index.toString());
   new ResizeObserver(function () {
@@ -122,6 +117,3 @@ var masonryEvents = ["load", "resize"];
 masonryEvents.forEach(function (event) {
   window.addEventListener(event, resizeAllMasonryItems);
 });
-
-/* Do a resize once more when all the images finish loading */
-waitForImages();
