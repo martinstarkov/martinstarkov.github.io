@@ -105,15 +105,5 @@ $(document).ready(function () {
   });
 });
 
-for (var index = 0; index < json_object.length; ++index) {
-  var card = document.getElementById("card-" + index.toString());
-  new ResizeObserver(function () {
-    resizeAllMasonryItems();
-  }).observe(card);
-}
-
-/* Resize all the grid items on the load and resize events */
-var masonryEvents = ["load", "resize"];
-masonryEvents.forEach(function (event) {
-  window.addEventListener(event, resizeAllMasonryItems);
-});
+window.addEventListener("load", resizeAllMasonryItems);
+window.addEventListener("resize", resizeAllMasonryItems);
