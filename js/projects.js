@@ -1,4 +1,5 @@
 var tmp = "";
+var posterCount = 0;
 
 for (var index = 0; index < json_object.length; ++index) {
   tmp += '<div class="col-sm-12 col-lg-6 gallery-item" style="display:inline-block;float:none;"><div class="card" id="card-' + index.toString() + '"><div id="carousel-' +
@@ -30,7 +31,8 @@ for (var index = 0; index < json_object.length; ++index) {
     var re = /(?:\.([^.]+))?$/;
     let extension = re.exec(value.images[image_index])[1];
     if (extension === "webm") {
-      tmp += '<video playsinline autoplay muted loop preload="auto" poster="resources/background/bg.png" class="d-block w-100" ';
+      posterCount++;
+      tmp += '<video playsinline autoplay muted loop preload="auto" class="d-block w-100" ';
     } else {
       tmp += '<img decoding="auto" class="d-block w-100" ';
     }
@@ -74,12 +76,32 @@ $(document).ready(function () {
   $('.popover-dismiss').popover({
     trigger: 'focus'
   });
-  var $grid = $('#gallery').masonry({
+});
+
+var $grid = $('#gallery').imagesLoaded( function() {
+  // init Masonry after all images have loaded
+  $grid.masonry({
     itemSelector : '.gallery-item',
     horizontalOrder: true
   });
-  // layout Masonry after each image loads
-  $grid.imagesLoaded().progress( function() {
-    $grid.masonry('layout');
-  }); 
+});
+
+var postersLoaded = 0;
+
+$('video').on('loadeddata',function (){
+
+  postersLoaded++;
+  
+  if (postersLoaded >= posterCount) {
+  
+  
+    $('#gallery').masonry({
+      itemSelector : '.gallery-item',
+      horizontalOrder: true
+    });
+  
+      $('#gallery').masonry('reloadItems');
+      $('#gallery').masonry('layout');
+  
+  }
 });
