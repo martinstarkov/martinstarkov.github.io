@@ -1,23 +1,34 @@
 var json_object = [
   {
+    title: "Cozy Winter Jam 2024 Entry: Cozy Cabin",
+    link: "https://bicyclemice.itch.io/cozy-cabin",
+    image_folder: "2024_cozy_winter_jam",
+    images: ["0.png", "1.png", "2.png", "3.png"],
+    completion: "Completed in January, 2025 &nbsp | &nbsp <a href='https://bicyclemice.itch.io/cozy-cabin'>Play in Browser</a>",
+    info: "Cozy game jam theme: 'Metamorphosis.' Our game takes place in the remote wilderness of Alaska, where the main character is tasked with transforming their house from dark and dusty to warm and cozy."
+  },
+  {
     title: "Brackeys Game Jam 2024 Entry: Storm Chaser",
     link: "https://bicyclemice.itch.io/storm-chaser",
     image_folder: "2024_brackeys_jam",
     images: ["1.png", "2.png", "3.png", "4.png"],
-    completion: "Completed in September, 2024",
+    completion: "Completed in September, 2024 &nbsp | &nbsp <a href='https://bicyclemice.itch.io/storm-chaser'>Play in Browser</a>",
+    info: "Game jam theme: 'Into The Storm.' This addicting game is about driving your car near tornadoes to collect thrills but if you get too close you might get sucked in!"
   },
   {
     title: "GMTK 2024 Game Jam Entry: Barkin Madness",
     link: "https://bicyclemice.itch.io/barkin-madness",
     image_folder: "2024_gmtk_jam",
     images: ["1.png", "2.png"],
-    completion: "Completed in August, 2024",
+    completion: "Completed in August, 2024 &nbsp | &nbsp <a href='https://bicyclemice.itch.io/barkin-madness'>Play in Browser</a>",
+    info: "Game jam theme: 'Built to Scale.' This game was made in loving memory of our Vizsla Anvic, who passed over the summer. It is about a father trying to manage the desires of all the new dogs his daughter brings home."
   },
   {
     title: "Fault Tolerant Solar Panel Drive",
     image_folder: "2024_solar_panel_drive",
     images: ["1.mp4", "2.mp4", "2.jpg", "3.jpg"],
     completion: "Completed in July, 2024",
+    info: "As part of a class on embedded systems, I designed and programmed a fault tolerant solar panel drive. If one of the servos turning the solar panel failed, the mechanism could automatically switch to the second servo by moving the coupling gear."
   },
   {
     title: "Pixel Game Jam 2024 Entry: AquaLife",
@@ -25,27 +36,30 @@ var json_object = [
     image_folder: "2024_aqualife",
     images: ["0.png", "2.png", "3.png", "1.png"],
     completion: "Completed in May, 2024",
+    info: "Game jam theme: 'Aqua.' This game is about transforming a polluted unstable underwater ecosystem into a thriving home for marine life. The player places down structures and cultivates fish habitats to find a delicate balance between environmental variables such as pH and salinity."
   },
   {
     title: "Autonomous Maze Navigating Drone",
     image_folder: "2024_maze_navigating_drone",
     images: ["1.mp4", "2.mp4"],
     completion: "Completed in March, 2024",
+    info: "As part of a course on micro air vehicles, I participated in a competition where teams would try to navigate a maze of dynamically changing obstacles to see which drone could fly the longest distance in a given time period. The algorithm I programmed detected the grassy ground and identified the horizon, after this it estimated what shapes are obstacles and mapped them into a bird's-eye view 2D map which it used to navigate and avoid obstacles. Our team made it to 4th place out of 13 teams."
   },
   {
     title: "Pizzicato: Motor Rehabiliation Serious Game",
     link: "https://pizzicato-game.github.io/",
     image_folder: "2024_pizzicato",
     images: ["5.gif", "1.png", "4.gif"],
-    completion: "Completed in February, 2024",
-    info: "For the course 'Building Serious Games', neuropsychology researchers from the University of Leiden commissioned me and a team of 5 others to develop a game to aid the motor rehabilitation of patients through sonification (creating sounds through actions). I worked as the lead programmer on the game. Our work was published under the name <a href='https://ieeexplore.ieee.org/document/10645594'>'Sonifying motor skills with Pizzicato, a game for motor behavior research'</a> in 2024 IEEE Conference on Games (CoG)."
+    completion: "Completed in February, 2024 &nbsp | &nbsp <a href='https://pizzicato-game.github.io/'>Play in Browser</a>",
+    info: "For the course 'Building Serious Games', neuropsychology researchers from the University of Leiden commissioned me and a team of 5 other students to develop a game to aid the motor rehabilitation of patients through sonification (creating sounds through actions). I worked as the lead programmer on the game. Our work was published under the name <a href='https://ieeexplore.ieee.org/document/10645594'>'Sonifying motor skills with Pizzicato, a game for motor behavior research'</a> in 2024 IEEE Conference on Games (CoG). Afterward, I was commissioned to further expand the game by connecting it to an online database for ease of data collection during clinical trials."
   },
   {
     title: "Custom C++ Game Engine",
     link: "https://github.com/martinstarkov/protegon",
     image_folder: "protegon",
-    images: ["8.gif", "2.png", "7.gif"],
-    completion: "Long-term project (2019 → present)",
+    images: ["renderer.png", "pathfinding.png", "fluid.png", "procedural.png", "particles.png", "buttons.png", "platforming.png", "collision.png", "text.png"],
+    completion: "Long-term ongoing project (2019 → present)",
+    info: "Protegon is a C++ game engine which is programmed almost entirely from scratch using OpenGL and SDL2. Some notable features include a custom batch renderer, scenes, animation, physics and collision detection, fluid simulation, chunk-based procedural generation, camera control, and many more. This is my longest running project to date."
   },
   {
     title: "Slingshot",
@@ -60,7 +74,7 @@ var json_object = [
     image_folder: "2023_gmtk_jam",
     images: ["1.png", "2.png", "3.png"],
     completion: "Completed in July, 2023",
-    info: "The theme of the game jam was 'Roles Reversed.' Our game was a role-reversal on the tower defense genre, where you send waves of units to attack the enemy castle, which they defend with turrets."
+    info: "Game jam theme: 'Roles Reversed.' Our game was a role-reversal on the tower defense genre, where you send waves of units to attack the enemy castle, which they defend with turrets."
   },
   {
     title: "Thrust-Vector-Controlled Lander Vehicle",
@@ -114,7 +128,7 @@ var json_object = [
     image_folder: "2022_gmtk_jam",
     images: ["1.mp4"],
     completion: "Completed in July, 2022",
-    info: "The theme of the game jam was 'Roll of the dice.' This was my first ever game jam. We made a simple game about a dice rolling toward a green square."
+    info: "Game jam theme: 'Roll of the dice.' This was my first ever game jam. We made a simple game about a dice rolling toward a green square."
   },
   {
     title: "GPU Optimized Fluid Simulation",
