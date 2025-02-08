@@ -1,5 +1,4 @@
 var tmp = "";
-var posterCount = 0;
 
 for (var index = 0; index < json_object.length; ++index) {
   tmp += '<div class="col-sm-12 col-lg-6 gallery-item" style="display:inline-block;float:none;"><div class="card" id="card-' + index.toString() + '"><div id="carousel-' +
@@ -31,10 +30,9 @@ for (var index = 0; index < json_object.length; ++index) {
     var re = /(?:\.([^.]+))?$/;
     let extension = re.exec(value.images[image_index])[1];
     if (extension === "mp4") {
-      posterCount++;
-      tmp += '<video playsinline autoplay muted loop preload="auto" class="d-block w-100" ';
+      tmp += '<video playsinline autoplay muted loop preload="auto" class="d-block w-100 noselect" ';
     } else {
-      tmp += '<img decoding="auto" class="d-block w-100" ';
+      tmp += '<img decoding="auto" class="d-block w-100 noselect" ';
     }
     tmp += 'src="resources/' + value.image_folder + "/" + value.images[image_index] + '">';
     if (extension === "mp4") {
@@ -70,12 +68,27 @@ for (var index = 0; index < json_object.length; ++index) {
 $("#gallery").prepend(tmp);
 
 $(document).ready(function () {
-  $(function () {
-    $('[data-toggle="popover"]').popover({html:true})
+  $('[data-toggle="popover"]').popover({
+    html: true,
+    trigger: 'manual' // Use manual trigger
+  }).click(function (e) {
+      e.preventDefault(); // Prevent default link behavior
+      const $this = $(this);
+      if ($this.hasClass('popover-displayed')) {
+          $this.popover('hide');
+          $this.removeClass('popover-displayed');
+          $this.removeClass('popover-active'); // Remove active class
+      } else {
+          $this.popover('show');
+          $this.addClass('popover-displayed');
+          $this.addClass('popover-active'); // Add active class
+      }
   });
-  $('.popover-dismiss').popover({
-    trigger: 'focus'
-  });
+
+    $('.popover-dismiss').popover({ trigger: 'focus' });
+
+
+    
 });
 
 var $grid = $('#gallery').imagesLoaded( function() {

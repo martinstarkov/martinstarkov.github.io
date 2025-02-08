@@ -1,369 +1,613 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-}
-
-.col-md-6 {
-  padding: 0;
-}
-
-.btn-secondary {
-  background-color: #212224;
-  border-color: #575b5f;
-}
-
-.btn-secondary:hover, .btn-secondary:focus {
-  background-color: #5a6268;
-  border-color: #545b62;
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #c9d1d9;
 }
 
 .front-background {
-  overflow-y: hidden;
-  height: 100vh;
-  background: black;
-  background-image: url("../resources/background/sky1.png");
-  background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
-.stretch-column {
-  height: 100vh;
+.front-background .image-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
-.front-divider {
-  border: 0.1vh solid light-grey;
-  height: 0vh;
-  margin: 2vh 0;
+.front-background .carousel {
+    height: 100%;
 }
 
-.front-links {
-  margin-left: 3vh;
-  margin-right: 3vh;
+.front-background .carousel-inner {
+    height: 100%;
 }
 
-.front-link:hover {
-  text-decoration: none;
-  color: black;
+.front-background .carousel-item {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.front-background .separator {
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+}
+
+.front-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.front-background .content {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    /* Increased padding */
+    border: 2px solid #58a6ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    /* Make it responsive - takes up to 90% of screen width */
+    margin: 20px auto;
+    /* Add some top/bottom margin for spacing */
+}
+
+
+.front-background .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #58a6ff;
+    margin-bottom: 2rem;
+}
+
+.front-background .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front-background h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.front-background p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.front-background .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.front-background .links a:hover {
+    color: #58a6ff;
+    border: 1px solid #58a6ff;
+}
+
+.front-background .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .front-background .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.front-background section {
+    padding: 4em 2em;
+    background-color: #1f2428;
+}
+
+.front-background h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #58a6ff;
+}
+
+.front-background .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.front-background .project {
+    border: 1px solid #30363d;
+    padding: 1em;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #24292e;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.front-background .project:hover {
+    transform: scale(1.05);
+}
+
+.front-background .project img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.front-background .project h3 {
+    margin-bottom: 0.5em;
+    color: #58a6ff;
+}
+
+.front-background .project p {
+    margin-bottom: 1em;
+}
+
+.front-background .project a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.front-background .project a:hover {
+    color: #58a6ff;
+}
+
+.front-background .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.front-background .contact-links a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.front-background .contact-links a:hover {
+    color: #58a6ff;
+}
+
+.front-background .gallery-item {
+    /* Styles for each gallery item container */
+    padding: 10px;
+    /* Add some padding around each item */
+}
+
+.front-background .card {
+    /* Styles for the card */
+    background-color: rgba(36, 41, 46, 0.9);
+    /* Semi-transparent background */
+    border: 1px solid #30363d;
+    /* Darker border */
+    color: #c9d1d9;
+    /* Light text color */
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Ensure content stays within card bounds */
+    transition: transform 0.2s;
+    /* Smooth scaling on hover */
+}
+
+.front-background .card:hover {
+    transform: scale(1.02);
+    /* Scale up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Add a more prominent shadow */
+}
+
+.front-background .card-img-top {
+    /* Styles for the carousel/image/video */
+    border-radius: 10px 10px 0 0;
+    /* Round only top corners */
+    overflow: hidden;
+    /* Ensure media stays within bounds */
+}
+
+.front-background .carousel-inner {
+    border-radius: 10px 10px 0 0;
+    /* Round only top corners */
+}
+
+.front-background .carousel-item {
+    position: relative;
+    /* For positioning overlay if needed */
+}
+
+.front-background .carousel-item video,
+.front-background .carousel-item img {
+    object-fit: cover;
+    /* Cover the entire area */
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* Prevent small space below image */
+}
+
+.front-background .carousel-control-prev,
+.front-background .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for controls */
+    opacity: 0;
+    /* Initially hide controls */
+    transition: opacity 0.3s;
+    /* Smooth fade-in/out */
+}
+
+.front-background .card:hover .carousel-control-prev,
+.front-background .card:hover .carousel-control-next {
+    opacity: 1;
+    /* Show controls on card hover */
+}
+
+.front-background .card-body {
+    /* Styles for the card body (title) */
+    padding: 1rem;
+}
+
+.front-background .card-title {
+    margin-bottom: 0.5rem;
+}
+
+.front-background .card-title a {
+    color: #58a6ff;
+    /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.front-background .card-title a:hover {
+    color: #58a6ff;
+    /* Lighter blue on hover */
+}
+
+.front-background .card-footer {
+    /* Styles for the card footer (info button) */
+    background-color: transparent;
+    /* Transparent footer */
+    border-top: none;
+    /* Remove top border */
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    /* Align content to edges */
+    align-items: center;
+
+}
+
+.front-background .card-footer .text-muted {
+    color: #768390;
+    /* Slightly lighter text color */
+}
+
+.front-background .info-button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.front-background .info-button:hover {
+    background-color: #58a6ff;
+    color: #24292e;
+}
+
+.front-background .invisible {
+    visibility: hidden;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .front-background .gallery-item {
+        padding: 5px;
+        /* Smaller padding on mobile */
+    }
+
+    .front-background .card {
+        transform: scale(0.95);
+        /* Slightly smaller cards on mobile */
+    }
+
+    .front-background .card-body {
+        padding: 0.7rem;
+        /* Smaller padding on mobile */
+    }
+
+    .front-background .card-footer {
+        padding: 0.3rem 0.6rem;
+        /* Smaller padding on mobile */
+    }
+
+    .front-background .info-button {
+        padding: 0.2rem 0.4rem;
+        /* Smaller button padding on mobile */
+        font-size: 0.8rem;
+    }
+
+    .front-background .card-title {
+        font-size: 1rem;
+    }
+
+    .front-background .card-footer .text-muted {
+        font-size: 0.8rem;
+    }
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.circle-image img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.95;
-  object-fit: cover;
+.projects-background .col-md-6 {
+    padding: 0;
 }
 
-@media (min-width: 992px) {
-  .front-name {
-    width: 100%;
-    font-weight: 700;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 3.5vw;
-    overflow: hidden;
-  }
-  .front-title {
-    width: 100%;
-    font-weight: 400;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 2vw;
-    overflow: hidden;
-  }
-  .front-link {
-    justify-content: center;
-    text-align: center;
-    font-size: 1.3vw;
-    font-weight: 400;
-    width: 33.33%;
-    color: rgb(150, 150, 150);
-  }
-  .front-info-box-content {
-    margin: 2.5vh;
-  }
-  .centered-box {
-    position: relative;
-    top: 50%;
-    left: 10vw;
-    transform: translate(0%, -50%);
-  }
-  .front-info-box {
-    width: 80%;
-    opacity: 0.9;
-    background-color: white;
-    border-radius: 0;
-    border: 2vh black solid;
-  }
-  .circle-image {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 35vw;
-    height: 35vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    border: 2vh solid black;
-  }
-  .centered-circle {
-    position: relative;
-    top: 50vh;
-    left: 5%;
-    justify-content: center;
-    transform: translate(0%, -50%);
-  }
+.projects-background .btn-secondary {
+    background-color: #212224;
+    border-color: #575b5f;
 }
 
-@media (max-width: 991.98px) {
-  .front-name {
-    width: 100%;
-    font-weight: 700;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 6.5vh;
-    overflow: hidden;
-  }
-  .front-title {
-    width: 100%;
-    font-weight: 400;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 4vh;
-    overflow: hidden;
-  }
-  .front-link {
-    justify-content: center;
-    text-align: center;
-    font-size: 3vh;
-    font-weight: 400;
-    width: 33.33%;
-    color: rgb(150, 150, 150);
-  }
-  .front-info-box-content {
-    margin: 3vh;
-  }
-  .centered-box {
-    position: relative;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-  }
-  .front-info-box {
-    /*height: 35%;*/
-    width: 55vh;
-    opacity: 0.9;
-    background-color: white;
-    border-radius: 0;
-    border: 2vh black solid;
-  }
-  .circle-image {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 50vh;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    border: 2vh solid black;
-  }
-  .centered-circle {
-    position: relative;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-  }
+.projects-background .btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #5a6268;
+    border-color: #545b62;
 }
 
-.invert {
-  filter: invert(100%);
+.projects-background .invert {
+    filter: invert(100%);
 }
 
-.carousel-inner .carousel-item {
-  transition: -webkit-transform 0s ease;
-  transition: transform 0s ease;
-  transition: transform 0s ease, -webkit-transform 0s ease;
+.projects-background .carousel-inner .carousel-item {
+    transition: -webkit-transform 0s ease;
+    transition: transform 0s ease;
+    transition: transform 0s ease, -webkit-transform 0s ease;
 }
 
 .projects-background {
-  background-image: none;
-  background-color: black;
-  /* background-image: url("../resources/background/sky2.png")!important; */
-  background-position: top left;
-  background-size: cover;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 30px;
+    background-color: rgba(0, 0, 0, 1);
+    /* Match front page background */
+    padding: 0px;
+    padding-top: 30px;
 }
 
-.card {
-  width: 100%;
-  border: 0!important;
-  background-color: transparent;
-  padding: 0;
-  display: inline-block!important;
-  break-inside: avoid;
+.projects-background .card {
+    width: 100%;
+    /* Remove borders */
+    border: 2px solid rgb(30, 29, 29);
+    background-color: rgba(36, 41, 46, 0.9);
+    /* Semi-transparent background like front page content box */
+    padding: 0;
+    display: inline-block !important;
+    break-inside: avoid;
+    border-radius: 10px;
+    /* Rounded corners like front page content box */
+    overflow: hidden;
+    /* Ensure content stays within card bounds */
+    transition: transform 0.2s;
+    /* Smooth scaling on hover */
 }
 
-.gallery-item {
-  padding-bottom: 30px;
+.projects-background .card:hover {
+    transform: scale(1.02);
+    /* Scale up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Add a more prominent shadow */
 }
 
-.card-title {
-  margin: 0;
+.projects-background .gallery-item {
+    padding-bottom: 30px;
 }
 
-.card-body {
-  background-color: #282828!important;
-  color: #fff!important;
+.projects-background .card-title {
+    margin: 0;
+    color: #fff;
+    /* Blue title like front page */
 }
 
-.card-footer {
-  background-color: #000!important;
-  border-left: 5px solid #282828!important;
-  border-right: 5px solid #282828!important;
-  border-bottom: 5px solid #282828!important;
-  border-top: none;
-  margin: 0;
-  padding: 0.5rem;
-  padding-left: 0.75rem;
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.projects-background .card-body {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Transparent card body */
+    color: #c9d1d9 !important;
+    /* Light text color like front page */
+    padding: 1rem;
+    /* Consistent padding */
 }
 
-.text-muted {
-  color: #fff !important;
+.projects-background .card-footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Transparent footer */
+    border-top: 0.1rem solid rgba(211, 211, 211, 0.551);
+    /* Remove borders */
+    margin: 0;
+    padding: 0.5rem 1rem;
+    /* Consistent padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.card-footer .text-muted {
-  display: flex;
-  align-items: center;
+.projects-background .text-muted {
+    color: #768390 !important;
+    /* Lighter text color like front page */
 }
 
-.info-button {
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
+.projects-background .card-footer .text-muted {
+    display: flex;
+    align-items: center;
+}
+
+.projects-background .info-button {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.projects-background .info-button:hover,
+.projects-background .info-button:active,
+.projects-background .info-button.popover-active {
+    background-color: #58a6ff !important;
+    color: white;
 }
 
 .home-nav {
-  background-color: #000;
-  text-align: center;
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
-  cursor: default;
-  border-bottom: 5px solid #444;
+    background-color: #000;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 10000;
+    cursor: default;
+    border-bottom: 3px solid rgba(211, 211, 211, 0.551);
 }
 
 .home-nav ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .home-nav li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .home-nav a {
-  color: #fff;
-  padding: 0.2em 1em 0.2em 1em;
-  margin: 0.6em 0.2em 0.6em 0.2em;
-  font-weight: 600;
-  border-radius: 8px;
-  position: relative;
-  display: block;
-  text-decoration: none;
-  outline: 0;
+    color: #fff;
+    padding: 0.2em 1em 0.2em 1em;
+    margin: 0.6em 0.2em 0.6em 0.2em;
+    font-weight: 400;
+    border-radius: 8px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    outline: 0;
 }
 
 .home-nav a:hover {
-  color: #5da9e9 !important;
+    color: #58a6ff !important;
 }
 
-a {
-  color: #ce9b5d;
+.projects-background a {
+    color: #fff;
+    /* Blue links */
+    text-decoration: none;
+    transition: color 0.3s;
+    /* Smooth transition */
 }
 
-a:hover {
-  color: #ab6a1a;
-  text-decoration: none;
+.projects-background a:hover {
+    color: #58a6ff;
+    /* Lighter blue on hover */
 }
 
-img {
-  background-color: transparent;
+.projects-background img {
+    background-color: transparent;
 }
 
-.carousel-item img {
-  width: 100%;
-}
-.carousel-item video {
-  width: 100%;
+.projects-background .carousel-item img {
+    width: 100%;
 }
 
-.masonry {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
-  grid-auto-rows: 0;
+.projects-background .carousel-item video {
+    width: 100%;
 }
-@media (max-width: 1400px) {
-  .masonry {
+
+.projects-background .masonry {
     display: grid;
     grid-gap: 1em;
-    grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
     grid-auto-rows: 0;
-  }
 }
 
-.masonry-content {
-  overflow: hidden;
+@media (max-width: 1400px) {
+    .projects-background .masonry {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));
+        grid-auto-rows: 0;
+    }
 }
 
-.carousel-item img {
-  transition: opacity 0.25s ease-in-out;
+.projects-background .masonry-content {
+    overflow: hidden;
 }
 
-.carousel-item img:hover {
-  opacity: 0.75;
+.projects-background .carousel-item img,
+.projects-background .carousel-item video {
+    transition: opacity 0.25s ease-in-out;
+}
+
+.projects-background .carousel-item img:hover,
+.projects-background .carousel-item video:hover {
+    opacity: 0.85;
 }
 
 @media (min-width: 576px) {
-  .card-columns {
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-  }
+    .projects-background .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
 }
 
-.card-columns {
-  @include media-breakpoint-only(sm) {
-    column-count: 1;
-  }
+@media (max-width: 576px) {
+    .projects-background .text-muted {
+        font-size: 65% !important;
+    }
+}
+
+.projects-background .card-columns {
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
 }
