@@ -93,7 +93,7 @@ var json_object = [
     title: "BEng Thesis: Hybrid Aerial-Aquatic Vehicle",
     link: "modules/thesis/BEng_thesis.pdf",
     image_folder: "2023_bachelor_thesis",
-    images: ["1.mp4", "2.png", "3.jpg", "4.jpg"],
+    images: ["2.png", "1.mp4", "3.jpg", "4.jpg"],
     completion: "Completed in May, 2023",
     info: "For my bachelor thesis, I set out to design and manufacture an autonomous hybrid aerial-aquatic vehicle capable of conducting a rapid transition maneuver from water to air. The concept was to set the vehicle at the bottom of a pool and have it propel through the water, rapidly unfolding upon reaching the air and continuing to fly. While the prototype was ready to fly, difficulty with waterproofing resulted in me running out of time to test the full maneuver."
   },
