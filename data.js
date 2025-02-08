@@ -2,13 +2,13 @@
 var carouselTime = 4000;
 
 // Images in front page carousel.
-var images = ["resources/2022_fluid_simulation/1.mp4", "resources/2024_solar_panel_drive/2.mp4", "resources/2024_maze_navigating_drone/1.mp4", "resources/protegon/8.gif", "resources/protegon/2.gif", "resources/2024_pizzicato/1.mp4", "resources/2024_pizzicato/2.mp4", "resources/2024_maze_navigating_drone/2.mp4", "resources/2024_gmtk_jam/2.png", "resources/2024_cozy_winter_jam/1.png", "resources/2024_brackeys_jam/3.png", "resources/2024_aqualife/1.png", "resources/2023_slingshot/2.mp4", "resources/2023_gmtk_jam/3.png", "resources/2023_connector_internship/2.png", "resources/2023_connector_internship/3.png", "resources/2023_bayes_tvc/1.mp4", "resources/2023_bayes_tvc/3.mp4", "resources/2023_bachelor_thesis/2.png", "resources/2023_bachelor_thesis/4.jpg", "resources/2022_wind_turbine/1.mp4", "resources/2022_wind_turbine/2.mp4", "resources/2022_wind_turbine/4.mp4", "resources/2022_hoberman_thesis/1.mp4", "resources/2022_collision_detection/2.gif", "resources/2022_collision_detection/3.gif", "resources/2022_collision_detection/5.gif", "resources/2022_fluid_simulation/2.mp4"];
+var images = ["resources/2022_fluid_simulation/1.mp4", "resources/2024_solar_panel_drive/2.mp4", "resources/2024_maze_navigating_drone/1.mp4", "resources/protegon/8.gif", "resources/protegon/2.gif", "resources/2024_pizzicato/1.mp4", "resources/2024_pizzicato/2.mp4", "resources/2024_maze_navigating_drone/2.mp4", "resources/2024_gmtk_jam/2.png", "resources/2025_cozy_winter_jam/1.png", "resources/2024_brackeys_jam/3.png", "resources/2024_aqualife/1.png", "resources/2023_slingshot/2.mp4", "resources/2023_gmtk_jam/3.png", "resources/2023_connector_internship/2.png", "resources/2023_connector_internship/3.png", "resources/2023_bayes_tvc/1.mp4", "resources/2023_bayes_tvc/3.mp4", "resources/2023_bachelor_thesis/2.png", "resources/2023_bachelor_thesis/4.jpg", "resources/2022_wind_turbine/1.mp4", "resources/2022_wind_turbine/2.mp4", "resources/2022_wind_turbine/4.mp4", "resources/2022_hoberman_thesis/1.mp4", "resources/2022_collision_detection/2.gif", "resources/2022_collision_detection/3.gif", "resources/2022_collision_detection/5.gif", "resources/2022_fluid_simulation/2.mp4"];
 
 var json_object = [
   {
-    title: "Cozy Winter Jam 2024 Entry: Cozy Cabin",
+    title: "Cozy Winter Jam 2025 Entry: Cozy Cabin",
     link: "https://bicyclemice.itch.io/cozy-cabin",
-    image_folder: "2024_cozy_winter_jam",
+    image_folder: "2025_cozy_winter_jam",
     images: ["0.png", "1.png", "2.png", "3.png"],
     completion: "Completed in January, 2025&nbsp|&nbsp <a href='https://bicyclemice.itch.io/cozy-cabin'>Play in Browser</a>",
     info: "Cozy game jam theme: 'Metamorphosis.' Our game takes place in the remote wilderness of Alaska, where the main character is tasked with transforming their house from dark and dusty to warm and cozy."
