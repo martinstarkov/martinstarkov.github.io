@@ -70,28 +70,25 @@ $("#gallery").prepend(tmp);
 $(document).ready(function () {
   $('[data-toggle="popover"]').popover({
     html: true,
-    trigger: 'manual' // Use manual trigger
+    trigger: 'manual'
   }).click(function (e) {
-      e.preventDefault(); // Prevent default link behavior
-      const $this = $(this);
-      if ($this.hasClass('popover-displayed')) {
-          $this.popover('hide');
-          $this.removeClass('popover-displayed');
-          $this.removeClass('popover-active'); // Remove active class
-      } else {
-          $this.popover('show');
-          $this.addClass('popover-displayed');
-          $this.addClass('popover-active'); // Add active class
-      }
+    e.preventDefault(); // Prevent default link behavior
+    const $this = $(this);
+    if ($this.hasClass('popover-displayed')) {
+      $this.popover('hide');
+      $this.removeClass('popover-displayed');
+      $this.removeClass('popover-active');
+    } else {
+      $this.popover('show');
+      $this.addClass('popover-displayed');
+      $this.addClass('popover-active');
+    }
   });
 
-    $('.popover-dismiss').popover({ trigger: 'focus' });
-
-
-    
+  $('.popover-dismiss').popover({ trigger: 'focus' });
 });
 
-var $grid = $('#gallery').imagesLoaded( function() {
+var $grid = $('#gallery').imagesLoaded(function () {
   // init Masonry after all images have loaded
   $grid.masonry({
   });
@@ -100,26 +97,25 @@ var $grid = $('#gallery').imagesLoaded( function() {
 var postersLoaded = 0;
 
 function waitForVidLoad(vids, callback) {
-  /* if no videos i.e. mobile mode only gifs and jpgs then call callback else masonry breaks.*/
-     if(vids.length === 0){
-         callback();
-     }
- var vidsLoaded = 0;
- vids.on('loadeddata', function() {
-   vidsLoaded++;
-   if (vids.length === vidsLoaded) {
-     callback();
-   }
- });
+  if (vids.length === 0) {
+    callback();
+  }
+  var vidsLoaded = 0;
+  vids.on('loadeddata', function () {
+    vidsLoaded++;
+    if (vids.length === vidsLoaded) {
+      callback();
+    }
+  });
 }
 
 var $container = $('#gallery');
 var vids = $('#gallery').find('video');
 
-waitForVidLoad(vids, function() {
-  $container.imagesLoaded(function() {
+waitForVidLoad(vids, function () {
+  $container.imagesLoaded(function () {
     $container.masonry({
-      itemSelector : '.gallery-item',
+      itemSelector: '.gallery-item',
       horizontalOrder: true
     });
   });

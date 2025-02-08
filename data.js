@@ -2,7 +2,7 @@
 var carouselTime = 4000;
 
 // Images in front page carousel.
-var images = ["resources/2022_fluid_simulation/1.mp4", "resources/2024_solar_panel_drive/2.mp4", "resources/2024_maze_navigating_drone/1.mp4", "resources/protegon/8.gif","resources/protegon/2.gif","resources/2024_pizzicato/1.mp4","resources/2024_pizzicato/2.mp4","resources/2024_maze_navigating_drone/2.mp4","resources/2024_gmtk_jam/2.png","resources/2024_cozy_winter_jam/1.png","resources/2024_brackeys_jam/3.png","resources/2024_aqualife/1.png","resources/2023_slingshot/2.mp4","resources/2023_gmtk_jam/3.png","resources/2023_connector_internship/2.png","resources/2023_connector_internship/3.png","resources/2023_bayes_tvc/1.mp4","resources/2023_bayes_tvc/3.mp4", "resources/2023_bachelor_thesis/2.png", "resources/2023_bachelor_thesis/4.jpg","resources/2022_wind_turbine/1.mp4", "resources/2022_wind_turbine/2.mp4", "resources/2022_wind_turbine/4.mp4", "resources/2022_hoberman_thesis/1.mp4", "resources/2022_collision_detection/2.gif", "resources/2022_collision_detection/3.gif", "resources/2022_collision_detection/5.gif", "resources/2022_fluid_simulation/2.mp4"];
+var images = ["resources/2022_fluid_simulation/1.mp4", "resources/2024_solar_panel_drive/2.mp4", "resources/2024_maze_navigating_drone/1.mp4", "resources/protegon/8.gif", "resources/protegon/2.gif", "resources/2024_pizzicato/1.mp4", "resources/2024_pizzicato/2.mp4", "resources/2024_maze_navigating_drone/2.mp4", "resources/2024_gmtk_jam/2.png", "resources/2024_cozy_winter_jam/1.png", "resources/2024_brackeys_jam/3.png", "resources/2024_aqualife/1.png", "resources/2023_slingshot/2.mp4", "resources/2023_gmtk_jam/3.png", "resources/2023_connector_internship/2.png", "resources/2023_connector_internship/3.png", "resources/2023_bayes_tvc/1.mp4", "resources/2023_bayes_tvc/3.mp4", "resources/2023_bachelor_thesis/2.png", "resources/2023_bachelor_thesis/4.jpg", "resources/2022_wind_turbine/1.mp4", "resources/2022_wind_turbine/2.mp4", "resources/2022_wind_turbine/4.mp4", "resources/2022_hoberman_thesis/1.mp4", "resources/2022_collision_detection/2.gif", "resources/2022_collision_detection/3.gif", "resources/2022_collision_detection/5.gif", "resources/2022_fluid_simulation/2.mp4"];
 
 var json_object = [
   {
@@ -55,7 +55,7 @@ var json_object = [
     title: "Pizzicato: Motor Rehabiliation Serious Game",
     link: "https://pizzicato-game.github.io/",
     image_folder: "2024_pizzicato",
-    images: ["1.mp4", "2.mp4", "1.png", ],
+    images: ["1.mp4", "2.mp4", "1.png",],
     completion: "Completed in February, 2024&nbsp|&nbsp <a href='https://pizzicato-game.github.io/'>Play in Browser</a>",
     info: "For the course 'Building Serious Games', neuropsychology researchers from the University of Leiden commissioned me and a team of 5 other students to develop a game to aid the motor rehabilitation of patients through sonification (creating sounds through actions). I worked as the lead programmer on the game. Our work was published under the name <a href='https://ieeexplore.ieee.org/document/10645594'>'Sonifying motor skills with Pizzicato, a game for motor behavior research'</a> in 2024 IEEE Conference on Games (CoG). Afterward, I was commissioned to further expand the game by connecting it to an online database for ease of data collection during clinical trials."
   },

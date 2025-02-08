@@ -3,10 +3,10 @@ let loadedImagesCount = 0; // Keep track of loaded images
 
 function shuffleArray(array) {
   for (var i = array.length - 1; i >= 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
   }
 }
 
@@ -14,7 +14,7 @@ shuffleArray(images);
 
 let mediaLoaded = 0; // Counter for loaded media (images and videos)
 
-function shuffleCarousel(){
+function shuffleCarousel() {
   let carouselItems = Array.from(carouselInner.children);
   shuffleArray(carouselItems);
   carouselInner.innerHTML = ''; // Clear the carousel
