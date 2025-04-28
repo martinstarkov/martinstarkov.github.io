@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
     margin: 0;
     overflow-x: hidden;
     background-color: #000;
@@ -67,15 +67,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 90%;
-    /* Make it responsive - takes up to 90% of screen width */
     margin: 20px auto;
-    /* Add some top/bottom margin for spacing */
 }
 
-
 .front-background .profile-image {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -92,6 +89,20 @@ body {
 .front-background h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
+}
+
+@media (max-width: 1000px) {
+    .front-background .content {
+        padding: 2em;
+    }
+    .front-background h1 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .front-background .profile-image {
+        max-width: 100px;
+        max-height: 100px;
+    }
 }
 
 .front-background p {
@@ -309,7 +320,6 @@ body {
     justify-content: space-between;
     /* Align content to edges */
     align-items: center;
-
 }
 
 .front-background .card-footer .text-muted {
@@ -335,38 +345,34 @@ body {
     visibility: hidden;
 }
 
+
 /* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
     .front-background .gallery-item {
         padding: 5px;
         /* Smaller padding on mobile */
     }
-
     .front-background .card {
         transform: scale(0.95);
         /* Slightly smaller cards on mobile */
     }
-
     .front-background .card-body {
         padding: 0.7rem;
         /* Smaller padding on mobile */
     }
-
     .front-background .card-footer {
         padding: 0.3rem 0.6rem;
         /* Smaller padding on mobile */
     }
-
     .front-background .info-button {
         padding: 0.2rem 0.4rem;
         /* Smaller button padding on mobile */
         font-size: 0.8rem;
     }
-
     .front-background .card-title {
         font-size: 1rem;
     }
-
     .front-background .card-footer .text-muted {
         font-size: 0.8rem;
     }
