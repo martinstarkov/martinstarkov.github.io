@@ -30,7 +30,7 @@ for (var index = 0; index < json_object.length; ++index) {
         let extension = re.exec(value.images[image_index])[1];
         if (extension === "mp4") {
             tmp +=
-                '<video playsinline autoplay muted loop preload="auto" class="d-block w-100 noselect" ';
+                '<video autoplay playsinline muted loop preload="auto" controlsList="nodownload" class="d-block w-100 noselect" ';
         } else {
             tmp += '<img decoding="auto" class="d-block w-100 noselect" ';
         }
