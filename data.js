@@ -6,6 +6,22 @@ var images = ["resources/2022_fluid_simulation/1.mp4", "resources/2024_solar_pan
 
 var json_object = [
   {
+    title: "Pizzicato: Motor Rehabiliation Serious Game",
+    link: "https://pizzicato-game.github.io/",
+    image_folder: "2024_pizzicato",
+    images: ["1.mp4", "2.mp4", "1.png",],
+    completion: "Completed in May, 2025&nbsp|&nbsp <a href='https://pizzicato-game.github.io/'>Play in Browser</a>",
+    info: "For the course 'Building Serious Games', neuropsychology researchers from the University of Leiden commissioned me and a team of 5 other students to develop a game to aid the motor rehabilitation of patients through sonification (creating sounds through actions). I worked as the lead programmer on the game. Our work was published under the name <a href='https://ieeexplore.ieee.org/document/10645594'>'Sonifying motor skills with Pizzicato, a game for motor behavior research'</a> in 2024 IEEE Conference on Games (CoG). Afterward, I was commissioned to further expand the game by connecting it to an online database for ease of data collection during clinical trials."
+  },
+  {
+    title: "GMTK 2025 Game Jam Entry: You Are God",
+    link: "https://bicyclemice.itch.io/you-are-god",
+    image_folder: "2025_gmtk_jam",
+    images: ["1.png", "1.mp4", "2.mp4", "3.png"],
+    completion: "Completed in August, 2025&nbsp|&nbsp <a href='https://bicyclemice.itch.io/you-are-god'>Play in Browser</a>",
+    info: "Game jam theme: 'Loop.' A game where you are god. It is your job to form the universe correctly so that all life may flourish. Thankfully doing so is as easy as placing tiles into tablets your angels have made for you."
+  },
+  {
     title: "Cozy Winter Jam 2025 Entry: Cozy Cabin",
     link: "https://bicyclemice.itch.io/cozy-cabin",
     image_folder: "2025_cozy_winter_jam",
@@ -50,14 +66,6 @@ var json_object = [
     images: ["1.mp4", "2.mp4"],
     completion: "Completed in March, 2024",
     info: "As part of a course on micro air vehicles, I participated in a competition where teams would try to navigate a maze of dynamically changing obstacles to see which drone could fly the longest distance in a given time period. The algorithm I programmed detected the grassy ground and identified the horizon, after this it estimated what shapes are obstacles and mapped them into a bird's-eye view 2D map which it used to navigate and avoid obstacles. Our team made it to 4th place out of 13 teams."
-  },
-  {
-    title: "Pizzicato: Motor Rehabiliation Serious Game",
-    link: "https://pizzicato-game.github.io/",
-    image_folder: "2024_pizzicato",
-    images: ["1.mp4", "2.mp4", "1.png",],
-    completion: "Completed in February, 2024&nbsp|&nbsp <a href='https://pizzicato-game.github.io/'>Play in Browser</a>",
-    info: "For the course 'Building Serious Games', neuropsychology researchers from the University of Leiden commissioned me and a team of 5 other students to develop a game to aid the motor rehabilitation of patients through sonification (creating sounds through actions). I worked as the lead programmer on the game. Our work was published under the name <a href='https://ieeexplore.ieee.org/document/10645594'>'Sonifying motor skills with Pizzicato, a game for motor behavior research'</a> in 2024 IEEE Conference on Games (CoG). Afterward, I was commissioned to further expand the game by connecting it to an online database for ease of data collection during clinical trials."
   },
   {
     title: "Custom C++ Game Engine",
